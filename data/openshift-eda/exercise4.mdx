@@ -17,7 +17,7 @@ With etcd backups safely scheduled, Sarah wants to tie multiple operations toget
 
 ## 4.1 - Creating the storage health job template
 
-Sarah needs to create a new job template for the OpenShift Data Foundation health check before constructing the workflow. The playbook is already stored in git at `data/workshop/playbooks/odf-healthcheck.yaml`.
+Sarah needs to create a new job template for the OpenShift Data Foundation health check before constructing the workflow. The playbook is already stored in git at `data/openshift-eda/playbooks/odf-healthcheck.yaml`.
 
 Let's create this job template now using the web interface.
 
@@ -120,4 +120,4 @@ Sarah now has a multi step health and backup workflow up and running!
 
 > **Note:** This is straightforward, simplified example for the purposes of the workshop. Production workflows often have branching conditional flows handling failures and validation along with integrating with external off-cluster systems
 
-You can now move on to [Exercise 5](/workshop/exercise5) to learn about event drive workflows.
+You can now move on to [Exercise 5](/openshift-eda/exercise5) to learn about event drive workflows.

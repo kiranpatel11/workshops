@@ -29,7 +29,7 @@ Enter the following values then click **Create**:
 - **Organization:** `Default`
 - **Execution environment:** `Control Plane Execution Environment`
 - **Source control type:** `git`
-- **Source control url:** `https://github.com/jmhbnz/workshops`
+- **Source control url:** `https://github.com/kiranpatel11/workshops`
 
 
 ![Project creation](/workshops/static/images/ocp-aap/aap-project.png)
@@ -54,7 +54,7 @@ By creating a project Sarah has told Ansible Automation Platform where some of h
 
 Sarah has previously distilled the Red Hat [etcd backup documentation](https://docs.redhat.com/en/documentation/openshift_container_platform/4.21/html/etcd/backing-up-and-restoring-etcd-data#backing-up-etcd-data_etcd-backup) into an ansible playbook. 
 
-The playbook is available in source control here: [https://github.com/jmhbnz/workshops/blob/main/data/workshop/playbooks/etcd-backup.yaml](https://github.com/jmhbnz/workshops/blob/main/data/workshop/playbooks/etcd-backup.yaml). Take some time to review this before we proceed.
+The playbook is available in source control here: [https://github.com/kiranpatel11/workshops/blob/main/data/openshift-eda/playbooks/etcd-backup.yaml](https://github.com/kiranpatel11/workshops/blob/main/data/openshift-eda/playbooks/etcd-backup.yaml). Take some time to review this before we proceed.
 
 > **Note:** This playbook is intentially relatively trivial. To minimize external dependencies for the workshop all the playbook does is generate the backup on a master node. In a production situation the backup would generally be replicated outside of the cluster, often to geographically resilient storage.
 
@@ -114,7 +114,7 @@ For a strech exercise have a go at creating schedule for this job template now w
 Call the schedule `acme-ocp-etcd-backup-daily` and set a frequency of daily.
 
 
-With a schedule created Sarah can tick that task off for the day! You can now move on to [Exercise 4](/workshop/exercise4), to create an end to end workflow 🚀.
+With a schedule created Sarah can tick that task off for the day! You can now move on to [Exercise 4](/openshift-eda/exercise4), to create an end to end workflow 🚀.
 
 ![Sarah etcd backups done](/workshops/static/images/ocp-aap/sarah-etcd-done.png)
 
