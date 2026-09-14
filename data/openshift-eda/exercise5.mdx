@@ -261,7 +261,7 @@ Feel free to take a moment to reivew the `expand-volume.yaml` rememdiation playb
 
 With all the foundations in place within ansible, Sarah moves on to configuring OpenShift alerting to ensure alerts will be forward to the newly established event driven ansible listener.
 
-Let's create an `AlertmanagerConfig` now.
+Let's create an `AlertmanagerConfig` now, and enable configuration to include user-defined `AlertManagerConfig` in cluster-monitoring.
 
 Click the **+ Quick Create** button in the top right corner of the OpenShift web console, then click **Import YAML**
 
@@ -284,6 +284,18 @@ spec:
     - name: eda-webhook-receiver
       webhookConfigs:
         - url: http://acme-ocp-volume-expansion.aap.svc.cluster.local:5000/endpoint
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cluster-monitoring-config
+  namespace: openshift-monitoring
+data:
+  config.yaml: |
+    enableUserWorkload: true
+    alertmanagerMain:
+      enableUserAlertmanagerConfig: true
 ```
 
 
